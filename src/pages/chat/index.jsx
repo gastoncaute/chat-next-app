@@ -42,16 +42,17 @@ export default function ChatPage() {
     }
 
     return (
-        <section>
-            <h1>Aplicacion de Chat</h1>
-            <form onSubmit={manejarEnvioDeMensaje} action="">
+        <section className="flex flex-col justify-center items-center">
+            <h1 className="m-4">Aplicacion de Chat</h1>
 
+            <form onSubmit={manejarEnvioDeMensaje} action="">
+                <label>Coloca tu Nombre</label>
                 <input
                 onChange={(evento) => setUsername(evento.target.value)}
                 type="text"
                 name=""
                 id=""
-                className="text-black"
+                className="text-black m-4 pl-2 p-1"
                 placeholder="Username" />
 
                 <ul>
@@ -84,10 +85,10 @@ export default function ChatPage() {
                     name=""
                     id=""
                     value={message}
-                    className="text-black"
-                    placeholder="Mensaje"
+                    className="text-black m-4 pl-2 p-1"
+                    placeholder="Escribe tu Mensaje"
                 />
-                <input type="submit" value="Enviar Mensaje" />
+                <input type="submit" value="Enviar Mensaje" className="border p-1 cursor-pointer rounded-xl"/>
             </form>
         </section>
     )
